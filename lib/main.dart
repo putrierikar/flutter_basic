@@ -15,75 +15,77 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('My App'),
         ),
-        body: ListView(children: [
-        Container(
-          margin: const EdgeInsets.all(10),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Container(
-                    child: const Text("BERITA TERBARU", style: TextStyle(fontSize: 17)),
-                    padding: const EdgeInsets.fromLTRB(0, 20, 10, 20),
-                  ),
-                  Container(
-                    child: const Text("PERTANDINGAN HARI INI", style: TextStyle(fontSize: 17)),
-                    padding: const EdgeInsets.all(20),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisSize: MainAxisSize.min,
+        body: ListView(
+          children: [
+            Container(
+              margin: const EdgeInsets.all(10),
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Expanded(child:
-                    Container(
-                      decoration: BoxDecoration(border: Border.all(color: Colors.purpleAccent, width: 4)),
-                      child: Image.network("https://akcdn.detik.net.id/community/media/visual/2019/04/08/b61401bc-e2fc-483c-9d0e-a5639194f37f_169.jpeg?w=700&q=90",
-                      fit: BoxFit.fitWidth)
-                    ),
-                  )
-                    
-                ],
-              ),
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    decoration: BoxDecoration(border: Border.all(color: Colors.purpleAccent, width: 4) ),
-                    child: const Text("Costa Mendekat ke Palmeiras", 
-                      style: TextStyle(
-                        fontSize: 30, 
-                        fontWeight: FontWeight.bold
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        child: const Text("BERITA TERBARU", style: TextStyle(fontSize: 17)),
+                        padding: const EdgeInsets.fromLTRB(0, 20, 10, 20),
                       ),
-                    ),
-                    padding: const EdgeInsets.all(20),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    decoration: BoxDecoration(border: Border.all(color: Colors.purpleAccent, width: 4)),
-                    child: const Text("Transfer", 
-                      style: TextStyle(
-                        fontSize: 15, 
-                        fontWeight: FontWeight.bold
+                      Container(
+                        child: const Text("PERTANDINGAN HARI INI", style: TextStyle(fontSize: 17)),
+                        padding: const EdgeInsets.all(20),
                       ),
-                    ),
-                    padding: const EdgeInsets.all(20),
+                    ],
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Expanded(child:
+                        Container(
+                          decoration: BoxDecoration(border: Border.all(color: Colors.purpleAccent, width: 4)),
+                          child: Image.network("https://akcdn.detik.net.id/community/media/visual/2019/04/08/b61401bc-e2fc-483c-9d0e-a5639194f37f_169.jpeg?w=700&q=90",
+                          width: 400,
+                          height: 300,
+                          fit: BoxFit.fitWidth)
+                        ),
+                      )  
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Expanded(child:
+                        Container(
+                          decoration: BoxDecoration(border: Border.all(color: Colors.purpleAccent, width: 4)),
+                          alignment: Alignment.bottomCenter,
+                          child: const Text("Costa Mendekat ke Palmeiras", 
+                            style: TextStyle(
+                              fontSize: 30, 
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
+                          padding: const EdgeInsets.all(20), 
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Expanded(child: 
+                        Container(
+                          decoration: const BoxDecoration(color: Colors.purpleAccent),
+                          child: const Text("Transfer", 
+                            style: TextStyle(
+                              fontSize: 20, 
+                            ),
+                          ),
+                          padding: const EdgeInsets.all(20),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
-            ],
-          ),
-        ),
-        ],
+            ),
+          ],
         ), 
       ),
     );
