@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('My App'),
+          backgroundColor: Colors.red,
         ),
         body: ListView(
           children: [
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
                         Container(
                           margin: const EdgeInsets.fromLTRB(16, 0, 16, 0),
                           decoration: BoxDecoration(border: Border.all(color: Colors.purpleAccent, width: 2)),
-                          child: Image.network("https://cdn-2.tstatic.net/jabar/foto/bank/images/diego-costa-atletico-madrid_20180110_192254.jpg",
+                          child: Image.network("https://picsum.photos/seed/picsum/536/354",
                           width: 400,
                           height: 300,
                           fit: BoxFit.fitWidth)
